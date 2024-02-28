@@ -1,0 +1,23 @@
+# Ignore editor and OS files
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore files generated during build or deployment
+/node_modules/
+/dist/
+/build/
+/.terraform/
+
+# Ignore sensitive information
+/secrets.yaml
+/credentials.yaml
+/*.env
+
+# Ignore ArgoCD specific files
+/.argocd/
+
+# Ignore Kubernetes manifest backup files
+*.bak
+.git

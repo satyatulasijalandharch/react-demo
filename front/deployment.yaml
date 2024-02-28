@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react
+  template:
+    metadata:
+      labels:
+        app: react
+    spec:
+      containers:
+        - name: react
+          image: mrstjch/todo-frontend:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: BACKEND_URL
+              value: "http://express:3001"
+          resources:
+            limits:
+              cpu: "0.5"  # Example CPU limit
+              memory: "512Mi"  # Example memory limit
+            requests:
+              cpu: "0.2"  # Example CPU request
+              memory: "256Mi"  # Example memory request

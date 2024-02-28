@@ -1,8 +1,8 @@
-# front-end-ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend
+  namespace: react-demo  # Added namespace
   labels:
     name: front-end
   annotations:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: react
+  namespace: react-demo  # Added namespace
 spec:
   replicas: 2
   selector:
@@ -22,8 +23,8 @@ spec:
               value: "http://express:3001"
           resources:
             limits:
-              cpu: "0.5"  # Example CPU limit
-              memory: "512Mi"  # Example memory limit
+              cpu: "0.5"
+              memory: "512Mi"
             requests:
-              cpu: "0.2"  # Example CPU request
-              memory: "256Mi"  # Example memory request
+              cpu: "0.2"
+              memory: "256Mi"

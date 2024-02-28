@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: front-end-ingress
+  name: frontend
   labels:
     name: front-end
   annotations:
